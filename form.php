@@ -8,6 +8,7 @@
     </head>
     <body>
         <form method="POST">
+            <button><a href="">Inserir novo aluno</a></button>
             <table>
                 <?php
 
@@ -28,7 +29,7 @@
                 <?php
                 foreach ($lista as $p ):
                 ?><tr><td><?= $p->getId(); ?></td><td><?= $p->getName(); ?></td><td><?= $p->getSchool(); ?></td><td><?= $p->getCourse(); ?></td>
-                <td><a href="">Update</a></td><td><a href="delete.php?id=<?=$p->getId();?>">Delete</a></td></tr>
+                <td><a href="update.php?id=<?= $p->getId();?>">Update</a></td><td><a href="delete.php?id=<?=$p->getId();?>">Delete</a></td></tr>
                 <?php
                 endforeach;
                 ?>  
