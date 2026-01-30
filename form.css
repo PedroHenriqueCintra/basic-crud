@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f4f6f9, #eef1f5);
+    padding: 40px;
+    color: #2c2c2c;
+}
+
+/* HEADER */
+body > div:first-of-type {
+    max-width: 1100px;
+    margin: 0 auto 30px auto;
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+/* ADD BUTTON */
+.btn-add {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 18px;
+    background: #28a745;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.35);
+    transition: all 0.25s ease;
+}
+
+.btn-add:hover {
+    background: #218838;
+    transform: translateY(-2px);
+}
+
+/* TABLE CONTAINER */
+.table-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* TABLE */
+table {
+    width: 1100px;
+    background: #fff;
+    border-radius: 12px;
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+/* HEADER ROW */
+table tr:first-child {
+    background: #1f2937;
+    color: #fff;
+    font-weight: 600;
+}
+
+/* CELLS */
+table td {
+    padding: 16px;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* ROW HOVER */
+table tr:not(:first-child):hover {
+    background: #f9fafb;
+}
+
+/* ACTION ICONS */
+.action {
+    font-size: 18px;
+    padding: 8px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+/* EDIT */
+.action.edit {
+    color: #2563eb;
+}
+
+.action.edit:hover {
+    background: rgba(37, 99, 235, 0.12);
+}
+
+/* DELETE */
+.action.delete {
+    color: #dc2626;
+}
+
+.action.delete:hover {
+    background: rgba(220, 38, 38, 0.12);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+    table {
+        width: 100%;
+    }
+}

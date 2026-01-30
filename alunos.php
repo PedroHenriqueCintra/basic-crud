@@ -29,7 +29,7 @@
         }
 
         public function Inserir(){
-            $sql = "INSERT INTO ALUNO (NOME, ESCOLA,CURSO) VALUES(':PNAME', ':PSCHOOL', ':PCOURSE');";
+            $sql = "INSERT INTO ALUNO (NOME, ESCOLA,CURSO) VALUES(:PNAME, :PSCHOOL, :PCOURSE);";
             $conexao = GetConexao();
             $comando = $conexao->prepare($sql);
             $comando->bindParam(":PNAME", $this->name);
@@ -46,8 +46,9 @@
             $conexao = GetConexao();
             $comando = $conexao->prepare($sql);
             $comando->bindParam(":PNOME", $this->name);
-            $comando->bindParam("PESCOLA", $this->school);
+            $comando->bindParam(":PESCOLA", $this->school);
             $comando->bindParam(":PCURSO", $this->course);
+            $comando->bindParam(":ID", $this->id);
             $comando->execute();
         }
 

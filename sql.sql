@@ -1,5 +1,5 @@
-CREATE DATABASE ALUNOS;
-USE ALUNOS;
+CREATE DATABASE ALUN;
+USE ALUN;
 
 CREATE TABLE ALUNO(
 	ID INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
@@ -8,8 +8,15 @@ CREATE TABLE ALUNO(
     CURSO TEXT NOT NULL
 );
 
-insert into ALUNO (NOME, ESCOLA,CURSO) values(":PNAME", ":PSCHOOL", ":PCOURSE");
-UPDATE ALUNO SET NOME = ':PNOME', ESCOLA = ':PESCOLA', CURSO = ':PCURSO' WHERE ID = ':ID';
-UPDATE ALUNO SET NOME = 'Joao', ESCOLA = 'HM', CURSO = 'ELETRICA' WHERE ID = 1;
-DELETE FROM ALUNO WHERE ID = ':ID';
+INSERT INTO ALUNO (NOME, ESCOLA, CURSO) VALUES
+('Lucas Andrade', 'SESI Matão', 'Electrical Systems'),
+('Mariana Oliveira', 'SESI Matão', 'Industrial Automation'),
+('Rafael Santos', 'SENAI Matão', 'CNC Turning'),
+('Bruno Ferreira', 'SENAI Matão', 'Industrial Mechanics'),
+('Diego Martins', 'SENAI Matão', 'Electrical Installations'),
+('Ana Beatriz Lima', 'ETEC Sylvio de Mattos Carvalho', 'Systems Development'),
+('Gabriel Rocha', 'ETEC Sylvio de Mattos Carvalho', 'Systems Development'),
+('Pedro Henrique Costa', 'ETEC Sylvio de Mattos Carvalho', 'Mechatronics'),
+('Carolina Nunes', 'SENAI Matão', 'CNC Programming'),
+('Felipe Azevedo', 'SESI Matão', 'Electrical Engineering Fundamentals');
 select * from ALUNO;
